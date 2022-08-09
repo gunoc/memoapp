@@ -1,15 +1,32 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app">
+    <!-- 로고 -->
+    <WishHeader />
+
+    <!-- 입력창 -->
+    <WishInput />
+
+    <!-- 리스트 -->
+    <WishList />
+
+    <!-- 전체삭제 -->
+    <WishFooter />
+
+  </div>
+
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import WishHeader from "./views/WishHeader.vue";
+import WishInput from "./views/WishInput.vue";
+import WishList from "./views/WishList.vue";
+import WishFooter from "./views/WishFooter.vue";
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
+  components :{
+    WishHeader,
+    WishInput,
+    WishList,
+    WishFooter
   }
 }
 </script>
@@ -21,6 +38,18 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+}
+
+nav {
+  padding: 30px;
+}
+
+nav a {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+nav a.router-link-exact-active {
+  color: #42b983;
 }
 </style>
